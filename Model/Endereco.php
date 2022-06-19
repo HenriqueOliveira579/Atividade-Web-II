@@ -77,4 +77,8 @@ class Endereco {
     {
         $this->complemento = $complemento;
     }  
+
+    public function set($key, $value) {
+        $this->$key = $value;
+    }
 }
