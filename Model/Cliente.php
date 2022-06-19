@@ -49,7 +49,8 @@ class Cliente {
         return $this;
     }
 
-    public function set($key, $value) {
+    public function set($key, $value) 
+    {
         $this->$key = $value;
     }
 }

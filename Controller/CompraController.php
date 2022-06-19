@@ -12,7 +12,6 @@
 
         public function main()
         {
-
             if (!$this->verificarCamposObrigatorios()) {
                 $this->redirecionar("https://http.cat/400");
             }
@@ -43,12 +42,13 @@
             $this->render($pedido);
 
         }
-        private function redirecionar($url) {
+        private function redirecionar($url) 
+        {
             header("Location: ".$url);
         }
 
-        private function verificarCamposObrigatorios() {
-
+        private function verificarCamposObrigatorios() 
+        {
             foreach ($this->camposObrigatorios as $campoObrigatorio) {
                 if (empty($_POST[$campoObrigatorio])) {
                     return false;
@@ -57,8 +57,8 @@
             return true;
         }
 
-        private function verificarCamposEndereco() {
-
+        private function verificarCamposEndereco() 
+        {
             foreach($this->camposEndereco as $campoEndereco) {
                 if (empty($_POST[$campoEndereco])) {
                     return false;
@@ -68,7 +68,8 @@
             return true;
         }
 
-        private function getCarrinho() {
+        private function getCarrinho() 
+        {
             $carrinho = [];
 
             foreach ($_POST["carrinho"] as $item) {
@@ -82,7 +83,8 @@
             return $carrinho;
         }
 
-        private function render($pedido) {
+        private function render($pedido) 
+        {
             $template = file_get_contents("../View/infos-pedido.html");
 
             $template = str_replace("{{precoTotal}}", $pedido->getPrecoTotal(), $template);

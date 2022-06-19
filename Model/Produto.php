@@ -9,7 +9,8 @@ class Produto
     private $quantidade;
     private $categoria;
 
-    function __construct($nome, $caminhoImagem, $precoUnitario, $categoria, $id=null) {
+    function __construct($nome, $caminhoImagem, $precoUnitario, $categoria, $id=null) 
+    {
 
         $this->id = $id;
         $this->nome = $nome;
@@ -19,7 +20,8 @@ class Produto
 
     }
 
-    public function renderCard() {
+    public function renderCard() 
+    {
     
         $template = file_get_contents("Resources/templates/card-produto.html");
 
@@ -33,7 +35,8 @@ class Produto
 
     }
 
-    public function renderLinha() {
+    public function renderLinha() 
+    {
         $template = file_get_contents("../Resources/templates/linha-produto.html");
 
         $template = str_replace("{{nome}}", $this->nome, $template);
@@ -45,7 +48,8 @@ class Produto
 
     }
 
-    public static function getAll() {
+    public static function getAll() 
+    {
         // Em uma versão futura vou implementar com banco de dados.
         $produtos = array();
         $produtos[] = new Produto("Pastel de Carne", "Resources/img/pastel-de-carne.jpg", 6.5, "Alimento", 1);
@@ -59,7 +63,8 @@ class Produto
         return $produtos;
     }
 
-    public static function getById($id) {
+    public static function getById($id) 
+    {
         // Isso também...
         $produtos = self::getAll();
         foreach ($produtos as $produto) {
@@ -71,16 +76,17 @@ class Produto
         return [];
     }
 
-    public function getPrecoTotal() {
+    public function getPrecoTotal() 
+    {
         return $this->quantidade * $this->precoUnitario;
     }
 
-    public function getId(): mixed
+    public function getId()
     {
         return $this->id;
     }
 
-    public function setId(mixed $id): void
+    public function setId(mixed $id)
     {
         $this->id = $id;
     }
@@ -90,7 +96,7 @@ class Produto
         return $this->nome;
     }
 
-    public function setNome($nome): void
+    public function setNome($nome)
     {
         $this->nome = $nome;
     }
@@ -100,7 +106,7 @@ class Produto
         return $this->caminhoImagem;
     }
 
-    public function setCaminhoImagem($caminhoImagem): void
+    public function setCaminhoImagem($caminhoImagem)
     {
         $this->caminhoImagem = $caminhoImagem;
     }
@@ -110,7 +116,7 @@ class Produto
         return $this->precoUnitario;
     }
 
-    public function setPrecoUnitario($precoUnitario): void
+    public function setPrecoUnitario($precoUnitario)
     {
         $this->precoUnitario = $precoUnitario;
     }
@@ -120,7 +126,7 @@ class Produto
         return $this->quantidade;
     }
 
-    public function setQuantidade($quantidade): void
+    public function setQuantidade($quantidade)
     {
         $this->quantidade = $quantidade;
     }
@@ -130,7 +136,7 @@ class Produto
         return $this->categoria;
     }
 
-    public function setCategoria($categoria): void
+    public function setCategoria($categoria)
     {
         $this->categoria = $categoria;
     }

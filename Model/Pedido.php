@@ -6,14 +6,15 @@
         private $delivery;
         private $precoDelivery = 10;
 
-        public function __construct($cliente, $produtos, $delivery=false) {
+        public function __construct($cliente, $produtos, $delivery=false) 
+        {
             $this->cliente = $cliente;
             $this->produtos = $produtos;
             $this->delivery = $delivery;
         }
 
-        public function getPrecoTotal() {
-
+        public function getPrecoTotal() 
+        {
             $soma = 0;
 
             foreach ($this->produtos as $produto) {
@@ -29,7 +30,8 @@
             return $soma;
         }
 
-        public function getPrecoSubTotal() {
+        public function getPrecoSubTotal() 
+        {
             return $this->getPrecoTotal() - $this->getPrecoDelivery();
         }
 
@@ -68,7 +70,7 @@
             return $this->delivery;
         }
 
-        public function setDelivery(mixed $delivery)
+        public function setDelivery($delivery)
         {
             $this->delivery = $delivery;
         }

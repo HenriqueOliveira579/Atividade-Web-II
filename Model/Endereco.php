@@ -8,7 +8,8 @@ class Endereco {
     private $numero;
     private $complemento;
 
-    function __construct($estado=null, $cidade=null, $bairro=null, $rua=null, $numero=null, $complemento=null) {
+    function __construct($estado=null, $cidade=null, $bairro=null, $rua=null, $numero=null, $complemento=null) 
+    {
         $this->estado = $estado;
         $this->cidade = $cidade;
         $this->bairro = $bairro;
@@ -18,67 +19,68 @@ class Endereco {
 
     }
 
-    public function getEstado(): mixed
+    public function getEstado()
     {
         return $this->estado;
     }
 
-    public function setEstado(mixed $estado): void
+    public function setEstado(mixed $estado)
     {
         $this->estado = $estado;
     }
 
-    public function getCidade(): mixed
+    public function getCidade()
     {
         return $this->cidade;
     }
 
-    public function setCidade(mixed $cidade): void
+    public function setCidade(mixed $cidade)
     {
         $this->cidade = $cidade;
     }
 
-    public function getBairro(): mixed
+    public function getBairro()
     {
         return $this->bairro;
     }
 
-    public function setBairro(mixed $bairro): void
+    public function setBairro(mixed $bairro)
     {
         $this->bairro = $bairro;
     }
 
-    public function getRua(): mixed
+    public function getRua()
     {
         return $this->rua;
     }
 
-    public function setRua(mixed $rua): void
+    public function setRua(mixed $rua)
     {
         $this->rua = $rua;
     }
 
-    public function getNumero(): mixed
+    public function getNumero()
     {
         return $this->numero;
     }
 
-    public function setNumero(mixed $numero): void
+    public function setNumero(mixed $numero)
     {
         $this->numero = $numero;
     }
 
-    public function getComplemento(): mixed
+    public function getComplemento()
     {
         return $this->complemento;
     }
 
-    public function setComplemento(mixed $complemento): void
+    public function setComplemento(mixed $complemento)
     {
         $this->complemento = $complemento;
     }  
 
-    public function set($key, $value) {
+    public function set($key, $value) 
+    {
         $this->$key = $value;
     }
 }

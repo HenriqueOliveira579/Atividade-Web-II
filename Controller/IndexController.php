@@ -4,7 +4,8 @@
 
     class IndexController {
 
-        public function main() {
+        public function main() 
+        {
 
             $templateProdutos = "";
             foreach (Produto::getAll() as $produto) {
