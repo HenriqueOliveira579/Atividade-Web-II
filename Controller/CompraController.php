@@ -37,6 +37,10 @@
             $cliente = new Cliente($_POST["nome"], $_POST["telefone"], $endereco);
             $carrinho = $this->getCarrinho();
 
+            if (empty($carrinho)) {
+                $this->redirecionar("https://http.cat/400");
+            }
+
             $pedido = new Pedido($cliente, $carrinho, $delivery);
 
             $this->render($pedido);
