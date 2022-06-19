@@ -12,5 +12,9 @@ Atividade feita para a disciplina de Web II.
 - Sistema de Login e Cadastro
 
 - Página de administração
+    - CRUD de pedidos
+    - CRUD de produtos
+    - CRUD de clientes
 
 - Página de visualização e atualização de pedidos em andamento (Restaurante)
+    - CRUD de pedidos
