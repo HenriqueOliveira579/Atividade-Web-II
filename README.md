@@ -22,3 +22,5 @@ Atividade feita para a disciplina de Web II.
 # Melhorias para o futuro
 
 - Retirar estilos em linha
+
+- Padronizar as nomenclaturas em português ou inglês
