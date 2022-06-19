@@ -15,7 +15,6 @@ const buscarCep = () => {
         .then((resp) => resp.json())
         .then(function(data) {
 
-            console.log(data);
             inputCidade.value = data.localidade;
             inputBairro.value = data.bairro;
             inputRua.value = data.logradouro;
