@@ -27,7 +27,7 @@ class Produto
 
         $template = str_replace("{{caminhoImagem}}", $this->caminhoImagem, $template);
         $template = str_replace("{{nome}}", $this->nome, $template);
-        $template = str_replace("{{preco}}", $this->precoUnitario, $template);
+        $template = str_replace("{{preco}}", Utils::formatarPreco($this->precoUnitario), $template);
         $template = str_replace("{{id}}", $this->id, $template);
         $template = str_replace("{{categoria}}", $this->categoria, $template);
 
@@ -41,8 +41,8 @@ class Produto
 
         $template = str_replace("{{nome}}", $this->nome, $template);
         $template = str_replace("{{quantidade}}", $this->quantidade, $template);
-        $template = str_replace("{{precoUnitario}}", $this->getPrecoUnitario(), $template);
-        $template = str_replace("{{total}}", $this->getPrecoTotal(), $template);
+        $template = str_replace("{{precoUnitario}}", Utils::formatarPreco($this->getPrecoUnitario()), $template);
+        $template = str_replace("{{total}}", Utils::formatarPreco($this->getPrecoTotal()), $template);
 
         return $template;
 

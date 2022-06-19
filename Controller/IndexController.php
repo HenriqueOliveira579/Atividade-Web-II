@@ -1,6 +1,7 @@
 <?php
 
     require "Model/Produto.php";
+    require "Utils/Utils.php";
 
     class IndexController {
 

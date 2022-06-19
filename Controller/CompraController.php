@@ -4,6 +4,7 @@
     require "../Model/Cliente.php";
     require "../Model/Produto.php";
     require "../Model/Pedido.php";
+    require "../Utils/Utils.php";
 
     class CompraController {
 
@@ -91,9 +92,9 @@
         {
             $template = file_get_contents("../View/infos-pedido.html");
 
-            $template = str_replace("{{precoTotal}}", $pedido->getPrecoTotal(), $template);
-            $template = str_replace("{{precoEntrega}}", $pedido->getPrecoDelivery(), $template);
-            $template = str_replace("{{precoSubTotal}}", $pedido->getPrecoSubTotal(), $template);
+            $template = str_replace("{{precoTotal}}", Utils::formatarPreco($pedido->getPrecoTotal()), $template);
+            $template = str_replace("{{precoEntrega}}", Utils::formatarPreco($pedido->getPrecoDelivery()), $template);
+            $template = str_replace("{{precoSubTotal}}", Utils::formatarPreco($pedido->getPrecoSubTotal()), $template);
 
             $templateCarrinho = "";
 
