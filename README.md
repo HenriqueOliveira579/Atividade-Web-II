@@ -26,3 +26,5 @@ Atividade feita para a disciplina de Web II.
 - Padronizar as nomenclaturas em português ou inglês
 
 - Responsividade
+
+- Formatação com duas casas decimais nos preços
