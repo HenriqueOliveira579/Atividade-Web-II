@@ -18,3 +18,7 @@ Atividade feita para a disciplina de Web II.
 
 - Página de visualização e atualização de pedidos em andamento (Restaurante)
     - CRUD de pedidos
+
+# Melhorias para o futuro
+
+- Retirar estilos em linha
