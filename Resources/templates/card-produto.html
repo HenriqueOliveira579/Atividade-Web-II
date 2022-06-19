@@ -1,0 +1,12 @@
+<div class="card m-2 w-25">
+    <img class="card-img-top" src={{caminhoImagem}} alt={{nome}}>
+    <div class="card-body form-group">
+        <h4 style="margin-bottom: 0">{{nome}}</h4>
+        <p class="text-muted" >{{categoria}}</p>
+        <h5 class="text-success">R$ {{preco}}</h5>
+
+        <input type="number" name="carrinho[{{id}}][quantidade]" class="form-control" placeholder="0" min="0">
+        <input type="hidden" name="carrinho[{{id}}][id-produto]" value="{{id}}">
+
+    </div>
+</div>
