@@ -76,9 +76,5 @@ class Endereco {
     public function setComplemento(mixed $complemento): void
     {
         $this->complemento = $complemento;
-    }
-
-
-
-
+    }  
 }

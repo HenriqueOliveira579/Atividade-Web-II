@@ -53,6 +53,3 @@ class Cliente {
         $this->$key = $value;
     }
 }
-
-
-?>

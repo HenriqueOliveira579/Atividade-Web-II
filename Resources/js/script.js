@@ -23,7 +23,6 @@ const buscarCep = () => {
             document.getElementById("input-numero").focus();
             
         })
-
 }
 
 inputCep.onkeyup = () => {
@@ -45,7 +44,6 @@ inputEntregaDelivery.onclick = () => {
 
     inputEndereco.style.display = "block";
 
-   
 }
 
 inputEntregaRetirar.onclick = () => {

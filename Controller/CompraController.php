@@ -5,8 +5,6 @@
     require "../Model/Produto.php";
     require "../Model/Pedido.php";
 
-
-
     class CompraController {
 
         private $camposObrigatorios = ["nome", "telefone", "entrega","pagamento", "carrinho"];
@@ -104,7 +102,6 @@
 
             echo $template;
         }
-
 
     }
 
