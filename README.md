@@ -9,8 +9,6 @@ Atividade feita para a disciplina de Web II.
     - CRUD de pedidos
     - CRUD de clientes
 
-- Sistema de Login e Cadastro
-
 - Página de administração
     - CRUD de pedidos
     - CRUD de produtos
