@@ -1,5 +1,5 @@
 <?php
 
-    require "Controller/IndexController.php";asdasdd
+    require "Controller/IndexController.php";
 
 ?>
