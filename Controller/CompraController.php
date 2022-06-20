@@ -9,7 +9,8 @@
     class CompraController {
 
         private $camposObrigatorios = ["nome", "telefone", "entrega","pagamento", "carrinho"];
-        private $camposEndereco = ["estado", "cidade", "bairro", "rua", "numero", "complemento"];
+        private $camposObrigatoriosEndereco = ["estado", "cidade", "bairro", "rua", "numero"];
+        private $camposOpcionaisEndereco = ["complemento"];
 
         public function main()
         {
@@ -20,14 +21,24 @@
             if ($_POST["entrega"] == "delivery") {
 
                 $delivery = true;
+                $endereco = new Endereco();
 
-                if (!$this->verificarCamposEndereco()) {
+                if (!$this->verificarCamposObrigatoriosEndereco()) {
                     $this->redirecionar("https://http.cat/400");
                 }
 
-                $endereco = new Endereco();
-                foreach($this->camposEndereco as $campoEndereco) {
-                    $endereco->set($campoEndereco, $_POST[$campoEndereco]);
+                if ($this->verificarCamposOpcionaisEndereco()) {
+                    
+                    $endereco->setComplemento($_POST["complemento"]);
+                }
+
+                
+                foreach($this->camposObrigatoriosEndereco as $campoObrigatorioEndereco) {
+                    $endereco->set($campoObrigatorioEndereco, $_POST[$campoObrigatorioEndereco]);
+                }
+
+                foreach ($this->camposOpcionaisEndereco as $campoOpcionalEndereco) {
+                    $endereco->set($campoOpcionalEndereco, $_POST[$campoOpcionalEndereco]);
                 }
 
             } else {
@@ -62,10 +73,19 @@
             return true;
         }
 
-        private function verificarCamposEndereco() 
+        private function verificarCamposOpcionaisEndereco() {
+            foreach ($this->camposOpcionaisEndereco as $campoOpcionalEndereco) {
+                if (empty($_POST[$campoOpcionalEndereco])) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private function verificarCamposObrigatoriosEndereco() 
         {
-            foreach($this->camposEndereco as $campoEndereco) {
-                if (empty($_POST[$campoEndereco])) {
+            foreach($this->camposObrigatoriosEndereco as $campoObrigatorioEndereco) {
+                if (empty($_POST[$campoObrigatorioEndereco])) {
                     return false;
                 }
             }
