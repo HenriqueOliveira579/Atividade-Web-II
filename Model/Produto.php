@@ -58,7 +58,8 @@ class Produto
         $produtos[] = new Produto("Pastel de Pizza", "Resources/img/pastel-de-pizza.jpg", 6.5, "Alimento",4);
         $produtos[] = new Produto("Pastel de Frango", "Resources/img/pastel-de-frango.jpg", 6.5, "Alimento",5);
         $produtos[] = new Produto("Pastel de Chocolate", "Resources/img/pastel-de-chocolate-preto.jpg", 9.5, "Sobremesa",6);
-        $produtos[] = new Produto("Coca Cola 2 Litros", "Resources/img/coca-cola-2l.jpg", 9, "Bebida",7);
+        $produtos[] = new Produto("Pastel de Nutella", "Resources/img/pastel-de-nutella.jpg", 12.5, "Sobremesa",7);
+        $produtos[] = new Produto("Coca Cola 2 Litros", "Resources/img/coca-cola-2l.jpg", 9, "Bebida",8);
 
         return $produtos;
     }
