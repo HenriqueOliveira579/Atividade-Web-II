@@ -24,5 +24,3 @@ Atividade feita para a disciplina de Web II.
 - Retirar estilos em linha
 
 - Padronizar as nomenclaturas em português ou inglês
-
-- Responsividade
